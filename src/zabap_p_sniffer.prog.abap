@@ -697,7 +697,7 @@ CLASS lcl_application DEFINITION.
     METHODS:
       end_of_selection.
     METHODS:
-      handle_onf4_for_field
+      handle_on_f4_for_field
         IMPORTING
           field    TYPE clike
         CHANGING
@@ -871,7 +871,7 @@ CLASS lcl_application IMPLEMENTATION.
 
     lo_salv->display( ).
   ENDMETHOD.
-  METHOD:handle_onf4_for_field.
+  METHOD:handle_on_f4_for_field.
     CASE field.
       WHEN 'REPNAM'.
         CALL FUNCTION 'REPOSITORY_INFO_SYSTEM_F4'
@@ -894,7 +894,7 @@ INITIALIZATION.
   app->initialization( ).
 
 AT SELECTION-SCREEN ON VALUE-REQUEST FOR s_repnam-low.
-  app->handle_onf4_for_field(
+  app->handle_on_f4_for_field(
     EXPORTING
       field    = 'REPNAM'
     CHANGING
@@ -902,7 +902,7 @@ AT SELECTION-SCREEN ON VALUE-REQUEST FOR s_repnam-low.
   ).
 
 AT SELECTION-SCREEN ON VALUE-REQUEST FOR s_repnam-high.
-  app->handle_onf4_for_field(
+  app->handle_on_f4_for_field(
     EXPORTING
       field    = 'REPNAM'
     CHANGING
