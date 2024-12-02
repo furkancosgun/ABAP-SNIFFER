@@ -33,7 +33,8 @@ To use **ABAP Sniffer**, follow these steps:
 ## Installation
 
 You can install ABAP Sniffer using one of the following methods:
-### 1. Using ABAPGit
+
+### 1. Using ABAPGit
 
 -  Install **ABAPGit** in your SAP system if it's not already installed.
 -  Open the **ABAPGit** application in your system.
